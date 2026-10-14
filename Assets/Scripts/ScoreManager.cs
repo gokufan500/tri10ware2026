@@ -37,6 +37,7 @@ public class ScoreManager : MonoBehaviour
 
     public static event Action<ScoreManager> ScoreChanged;
     public static event Action<ScoreManager> LevelStarted;
+    public static event Action<ScoreManager> RunStarted; // a brand new run (upgrades reset on this)
     public static event Action<LevelResult> LevelCompleted;
     public static event Action NextLevelRequested; // if nothing listens, the current scene is reloaded
 
@@ -70,6 +71,7 @@ public class ScoreManager : MonoBehaviour
         instance = null;
         ScoreChanged = null;
         LevelStarted = null;
+        RunStarted = null;
         LevelCompleted = null;
         NextLevelRequested = null;
     }
@@ -126,6 +128,7 @@ public class ScoreManager : MonoBehaviour
     public void StartRun(string levelId = null)
     {
       RunScore = 0;
+      RunStarted?.Invoke(this);
       StartLevel(levelId);
     }
 
