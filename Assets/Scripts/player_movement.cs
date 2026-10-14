@@ -20,6 +20,10 @@ public class player_movement : MonoBehaviour
     [Header("Air")]
     public float airDrag = 0.01f; // air resistance force = airDrag * speed^2, no hard speed cap
 
+    [Header("Swinging (A/D while hooked)")]
+    public grappling_hook hook; // found on this object if left empty
+    public float swingForce = 10f; // no speed limit, pumping the swing keeps adding speed
+
     [Header("Ground Check")]
     [Range(0f, 1f)] public float minGroundNormalY = 0.7f; // surfaces steeper than ~45 degrees count as walls
 
@@ -34,6 +38,7 @@ public class player_movement : MonoBehaviour
     void Awake()
     {
         if (rb == null) rb = GetComponent<Rigidbody2D>();
+        if (hook == null) hook = GetComponent<grappling_hook>();
 
         // Friction is applied in code, so the player doesn't stick to walls when pushing into them mid-air.
         // An Inspector-assigned material is kept.
@@ -89,6 +94,12 @@ public class player_movement : MonoBehaviour
     void ApplyWalkForce()
     {
       if (horizontalMovement == 0f) return;
+
+      if (hook != null && hook.IsAttached && !IsGrounded)
+      {
+        rb.AddForce(new Vector2(horizontalMovement * swingForce, 0f));
+        return;
+      }
 
       float dir = Mathf.Sign(horizontalMovement);
       float targetSpeed = moveSpeed * Mathf.Abs(horizontalMovement);
