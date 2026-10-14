@@ -182,6 +182,14 @@ public class ScoreManager : MonoBehaviour
 
     public void ContinueToNextLevel()
     {
+      // An earned upgrade reward is picked first, then this runs again
+      UpgradeManager upgrades = UpgradeManager.Current;
+      if (upgrades != null && upgrades.HasUnclaimedReward)
+      {
+        upgrades.ShowReward(ContinueToNextLevel);
+        return;
+      }
+
       if (NextLevelRequested != null) NextLevelRequested();
       else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
