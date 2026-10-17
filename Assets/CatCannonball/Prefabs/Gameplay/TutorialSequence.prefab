@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2379938484822508195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8916475789665230336}
+  - component: {fileID: 2533697758244584435}
+  m_Layer: 0
+  m_Name: TutorialSequence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8916475789665230336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2379938484822508195}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2533697758244584435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2379938484822508195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03aef9b85fc24bd2b56c591fb30e591f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CatCannonball.TutorialSequence
+  Player: {fileID: 0}
+  SceneTransition: {fileID: 0}
+  FollowCamera: {fileID: 0}
+  LevelFlow: {fileID: 0}
+  AutoStart: 1
+  StageOne: {fileID: 0}
+  StageOneRoot: {fileID: 0}
+  StageOneSpawn: {fileID: 0}
+  StageOneBounds: {fileID: 0}
+  StageOneCameraSettings: {fileID: 0}
+  StageOneKillY: -25
+  StageTwo: {fileID: 0}
+  StageTwoRoot: {fileID: 0}
+  StageTwoSpawn: {fileID: 0}
+  StageTwoBounds: {fileID: 0}
+  StageTwoCameraSettings: {fileID: 0}
+  StageTwoKillY: -5
