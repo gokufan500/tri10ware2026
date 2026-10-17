@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617f3b5c77486bf488bcc32cd63a81e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CatCannonball.MovementSettings
+  Mass: 1
+  GravityScale: 1
+  AirDrag: 0.025
+  GroundFriction: 9
+  GroundForce: 38
+  AirForce: 10
+  JumpImpulse: 12
+  CoyoteTime: 0.1
+  JumpBuffer: 0.12
+  SpaceReleaseBump: 3
+  SpaceDirectionalMultiplier:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 0.65
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1.35
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  SpaceStationaryMultiplier: 1
+  SpaceStationarySpeed: 0.1
+  YankSpeedThreshold: 8
+  YankVelocityChange: 10
+  RedirectPivotDominance: 0.85
+  WallRunForce: 32
+  WallSlideFriction: 12
+  WallSlideGravityLimit: 0.9
+  FastFallMultiplier: 1.4
+  HookRange: 12.4
+  HookTravelSpeed: 82
+  MinimumRopeLength: 0.1
+  AimAssistRadius: 1.2
+  HookableLayers:
+    serializedVersion: 2
+    m_Bits: 7680
+  HookBlockingLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  MovementLayers:
+    serializedVersion: 2
+    m_Bits: 1536
+  GroundProbeDistance: 0.1
+  WallProbeDistance: 0.1
+  SupportNormalY: 0.55
+  WallNormalX: 0.65
+  GroundedUpwardSpeed: 0.5
+  PlatformSurfaceTolerance: 0.12
+  MinimumImpactSpeed: 7
+  BadImpactAngle: 55
+  MinimumBadImpactSpeed: 1.5
